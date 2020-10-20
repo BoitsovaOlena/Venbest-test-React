@@ -1,0 +1,56 @@
+
+.filter {
+   width: auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   &__input{
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   align-items: center;
+   position: relative;
+   padding-bottom:15px;
+      .error{
+         border:1px solid red;
+      }
+     input ~ .note:before {
+         content:"";
+         position:absolute;
+         bottom:10px;
+         left:100px;
+         color: red;
+         font-size:10px;
+
+     }
+      .error~ .note:before {
+         content:"Недопустимые символы";
+     }
+
+      p{
+         width:100px;
+      }
+   }
+   &__radio{
+      p{
+         display:inline-block;
+         width:100px;
+      }
+   }
+   &__name:before{
+      content:"Можно вводить только буквы";
+
+   }
+
+}
+h2{
+   text-align:center;
+}
+input[type="text"]{
+   border-radius: 5px;
+   padding: 10px;
+   border: 1px solid rgb(87, 87, 87);
+}
+
+
